@@ -1,0 +1,54 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "nom": "Dupont",
+      "prenom": "Alice",
+      "adresse": "12 rue des Fleurs, 75001 Paris",
+      "email": "alice.dupont@example.com",
+      "telephone": "0601020304",
+      "service": "Informatique",
+      "date": "2025-12-01"
+    },
+    {
+      "id": 2,
+      "nom": "Martin",
+      "prenom": "Bob",
+      "adresse": "34 avenue Victor Hugo, 69002 Lyon",
+      "email": "bob.martin@example.com",
+      "telephone": "0611121314",
+      "service": "Comptabilité",
+      "date": "2025-11-25"
+    },
+    {
+      "id": 3,
+      "nom": "Durand",
+      "prenom": "Claire",
+      "adresse": "56 boulevard Saint-Germain, 75005 Paris",
+      "email": "claire.durand@example.com",
+      "telephone": "0622233445",
+      "service": "Marketing",
+      "date": "2025-10-30"
+    },
+    {
+      "id": 4,
+      "nom": "Leroy",
+      "prenom": "David",
+      "adresse": "78 route de Toulouse, 31000 Toulouse",
+      "email": "david.leroy@example.com",
+      "telephone": "0633344556",
+      "service": "Ressources Humaines",
+      "date": "2025-12-05"
+    },
+    {
+      "id": 5,
+      "nom": "Moreau",
+      "prenom": "Emma",
+      "adresse": "90 impasse des Lilas, 13001 Marseille",
+      "email": "emma.moreau@example.com",
+      "telephone": "0644455667",
+      "service": "Support",
+      "date": "2025-11-28"
+    }
+  ]
+}
