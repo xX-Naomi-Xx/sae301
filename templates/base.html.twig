@@ -2,33 +2,102 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-
+    <title>{% block title %}SAE301!{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
     {% endblock %}
 
 </head>
 <body>
-{% block nav %}
-    <nav>
-        <ul>
-            <li><strong>SAE301</strong></li>
-        </ul>
-        <ul>
-            <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
-            <a href="{{ path('app_commande') }}">Réserver</a>
-            <li><a href="{{ path('app_actu') }}">Actualités</a></li>
-            <li><a href="{{ path('app_connexion') }}">Connexion</a></li>
-        </ul>
-    </nav>
+{% block header %}
+
+    <header class="main-header">
+        <nav class="container">
+            <a href="{{ path('app_accueil') }}" class="logo">
+                <img src="{{ asset('images/logo.svg') }}" alt="Jardins Harmonie Logo" style="height: 40px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="{{ path('app_reserver') }}">Réserver</a></li>
+                <li><a href="{{ path('app_actualites') }}">Actualités</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="btn-cta">Réservation</a>
+        </nav>
+    </header>
 {% endblock %}
 
 {% block main %}
 {% endblock %}
 
 {%  block footer %}
-    <footer style="position: absolute; bottom: 0;">@Designed By MMI</footer>
+    <!-- CTA Section -->
+    <section class="footer-cta container">
+        <div class="cta-content">
+            <h2>Votre jardin mérite le meilleur soin</h2>
+            <p>Prenez rendez-vous dès aujourd’hui et profitez d’un jardin entretenu sans effort.</p>
+            <a href="#" class="btn-primary">Réserver un créneau</a>
+        </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="Jardins Harmonie Logo" style="height: 40px;">
+                </div>
+                <p>Jardins Harmonie – Votre jardin entre de bonnes mains.</p>
+                <div class="social-icons">
+                    <a href="#" class="icon">Twitter</a>
+                    <a href="#" class="icon">FB</a>
+                    <a href="#" class="icon">Insta</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Contact -->
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li>+33 03 25 42 46 46</li>
+                    <li>jardin.harmonie@gmail.com</li>
+                    <li>9 Rue Quebec, 10430 Rosières-près-Troyes</li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Liens Utiles -->
+            <div class="footer-col">
+                <h4>LIENS UTILES</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">Compte</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Informations -->
+            <div class="footer-col">
+                <h4>INFORMATIONS</h4>
+                <ul>
+                    <li><a href="#">Mention légales</a></li>
+                    <li><a href="#">Politiques de confidentialité</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2025, All Rights Reserved by Jardin Harmonie</p>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+     {% block importmap %}{{ importmap('app') }}{% endblock %}
 {% endblock %}
 </body>
 </html>

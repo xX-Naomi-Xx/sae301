@@ -12,8 +12,13 @@ class AccueilController extends AbstractController
     #[Route('/', name: 'app_accueil')]
     public function index(): Response
     {
+
+        // Le message que tu veux afficher
+        $message = "Bienvenue sur ma page d'accueil !";
+
+        // On envoie le message au template
         return $this->render('accueil/index.html.twig', [
-            'message' => 'Page Accueil',
+            'message' => $message,
         ]);
     }
 }

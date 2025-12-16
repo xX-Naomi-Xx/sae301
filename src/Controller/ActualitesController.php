@@ -7,12 +7,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 
-class ActuController extends AbstractController
+class ActualitesController extends AbstractController
 {
-    #[Route('/actu', name: 'app_actu')]
+    #[Route('/actualites', name: 'app_actualites')]
     public function index(): Response
     {
-        return $this->render('actu/index.html.twig', [
+        return $this->render('actualites/index.html.twig', [
             'message' => 'Page Actualités',
         ]);
     }

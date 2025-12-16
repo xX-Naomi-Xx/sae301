@@ -1,5 +1,5 @@
 <?php
-
+// src/Form/ClientStep2Type.php
 namespace App\Form;
 
 use App\Entity\Client;
@@ -7,19 +7,12 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FormulaireType extends AbstractType
+
+class ClientStep2Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder
-            ->add('nom')
-            ->add('prenom')
-            ->add('adresse')
-            ->add('email')
-            ->add('telephone')
-            ->add('service')
-            ->add('date')
-        ;
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

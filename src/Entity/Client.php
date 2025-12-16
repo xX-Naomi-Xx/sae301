@@ -28,9 +28,6 @@ class Client
     #[ORM\Column]
     private ?int $telephone = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $service = null;
-
     #[ORM\Column]
     private ?\DateTime $date = null;
 
@@ -95,18 +92,6 @@ class Client
     public function setTelephone(int $telephone): static
     {
         $this->telephone = $telephone;
-
-        return $this;
-    }
-
-    public function getService(): ?string
-    {
-        return $this->service;
-    }
-
-    public function setService(string $service): static
-    {
-        $this->service = $service;
 
         return $this;
     }
